@@ -8,7 +8,7 @@ public class GamePlayerProxy implements IGamePlayer,IProxy {
         try {
             gamePlayer = new GamePlayer(this,name);
         } catch (Exception e) {
-            // TODO 异常处理
+            e.printStackTrace();
         }
     }
     //代练杀怪
