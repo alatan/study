@@ -1,5 +1,8 @@
 package designPatterns.factory;
 
+/**
+ * 工厂模式
+ */
 public class NvWa {
     public static void main(String[] args) {
         //声明阴阳八卦炉
