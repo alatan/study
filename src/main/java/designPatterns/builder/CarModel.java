@@ -3,7 +3,7 @@ package designPatterns.builder;
 import java.util.ArrayList;
 
 /**
- * 建造者模式
+ * 模版方法模式，run方法就是模版方法，将实现移动抽象类里面
  */
 public abstract class CarModel {
     //这个参数是各个基本方法执行的顺序
