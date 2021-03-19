@@ -15,5 +15,12 @@ public class Client {
         xiaoSan.setCommand(command);
         //接头人执行命令
         xiaoSan.action();
+        //删除一项需求
+        System.out.println("------------客户要求删除一项需求---------------");
+        command = new CancelDeleteRequireCommand();
+        //接头人接收到命令
+        xiaoSan.setCommand(command);
+        //接头人执行命令
+        xiaoSan.action();
     }
 }

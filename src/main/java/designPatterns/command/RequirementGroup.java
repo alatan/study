@@ -24,4 +24,8 @@ public class RequirementGroup extends Group {
     public void plan() {
         System.out.println("客户要求需求变更计划...");
     }
+
+    public void rollBack(){
+        System.out.println("剔除需求...");
+    }
 }

@@ -24,4 +24,8 @@ public class PageGroup extends Group {
     public void plan() {
         System.out.println("客户要求页面变更计划...");
     }
+
+    public void rollBack(){
+        System.out.println("删除页面...");
+    }
 }

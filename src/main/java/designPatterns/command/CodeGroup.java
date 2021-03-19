@@ -24,4 +24,9 @@ public class CodeGroup extends Group {
     public void plan() {
         System.out.println("客户要求代码变更计划...");
     }
+
+    public void rollBack(){
+        System.out.println("删除代码...");
+        System.out.println("重新发布...");
+    }
 }
