@@ -1,7 +1,7 @@
 package designPatterns.command;
 
 /**
- * 抽象组
+ * 项目抽象组
  */
 public abstract class Group {
     //甲乙双方分开办公，如果你要和某个组讨论，你首先要找到这个组
