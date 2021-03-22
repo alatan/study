@@ -1,4 +1,4 @@
-package designPatterns.adapter.compoundAdapter;
+package designPatterns.adapter.compositeAdapter;
 
 import designPatterns.adapter.IUserInfo;
 

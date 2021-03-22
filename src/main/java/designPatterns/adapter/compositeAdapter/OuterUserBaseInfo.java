@@ -1,4 +1,4 @@
-package designPatterns.adapter.compoundAdapter;
+package designPatterns.adapter.compositeAdapter;
 
 import java.util.HashMap;
 import java.util.Map;
