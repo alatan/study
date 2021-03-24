@@ -23,7 +23,7 @@ import java.util.HashMap;
  *
  * 解释器模式在实际的系统开发中使用得非常少，因为它会引起效率、性能以及维护等问题，一般在大中型的框架型项目能够找到它的身影，
  * 如一些数据分析工具、报表设计工具、科学计算工具等，若你确实遇到“一种特定类型的问题发生的频率足够高”的情况，准备使用解释器模式时，
- * 可以考虑一下Expression4J、MESP（Math Expression String Parser）、Jep等开源的解析工具包
+ * 可以考虑一下 Expression4J、MESP（Math Expression String Parser）、Jep等开源的解析工具包
  */
 public class Client {
 
