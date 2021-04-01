@@ -7,7 +7,8 @@ import java.util.List;
  * 命令配置对象
  */
 public enum CommandEnum {
-    ls("com.cbf4life.common.command.LSCommand");
+    ls("designPatterns.commandAndChain.LSCommand"),
+    df("designPatterns.commandAndChain.DFCommand");
     private String value = "";
     //定义构造函数，目的是Data(value)类型的相匹配
     private CommandEnum(String value){
