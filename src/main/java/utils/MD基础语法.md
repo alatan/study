@@ -16,7 +16,7 @@
 ***这是粗体+斜体***
 
 #### 删除线
-~~就像这样~~
+~~没有价值就会被抛弃~~
 
 #### 引用
 > markdown是好的写作方式。
@@ -28,13 +28,13 @@
 >
 > 行动就成功了一半。
 #### 列表
-* Red
-* Green
-* Blue
+* 学习
+* 思考
+* 创造
 #### 有序列表
-1. Bird
-2. McHale
-3. Parish
+1. 昨夜西风凋碧树。独上高楼，望尽天涯路。
+2. 衣带渐宽终不悔，为伊消得人憔悴。
+3. 众里寻他千百度。蓦然回首，那人却在，灯火阑珊处。
 
 
 #### 分隔线
@@ -42,24 +42,21 @@
 ---------------------------------------
 
 #### 链接
-[an example](http://baidu.com/)
+[百度一下](http://www.baidu.com/)
 
-[an optional title example](http://google.com/ "Optional Title")
+[Google](http://www.google.com/ "google")
 
 #### 表格
-| Item     | Value | Qty   |
+| 账户     | 余额 | 类别   |
 | :------- | ----: | :---: |
-| Computer | $1600 |  5    |
-| Phone    | $12   |  12   |
-| Pipe     | $1    |  234  |
+| 人民币    | 5百万  |  活期    |
+| 比特币    | 5个   |  数字资产 |
+| 股票基金  | 5亿  |  理财     |
 
 #### 代码区域（四个空格）
-    这是一个代码区块。
-    private ArrBalMngr _getArrBalMngr() {
-        if (arrBalMngr == null) {
-            arrBalMngr = (ArrBalMngr) CbbApplicationContext.getBean(ArrBalMngr.class, arrBalMngr);
-        }
-        return arrBalMngr;
+    /** 这是一个Java代码区块 */
+    public static void main(String[] args) {
+        System.out.println("hello world");
     }
 
 #### 图像
