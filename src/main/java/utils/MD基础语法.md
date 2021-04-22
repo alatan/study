@@ -19,16 +19,14 @@
 ~~就像这样~~
 
 #### 引用
-> This is a blockquote with two paragraphs. Lorem ipsum dolor sit amet,
-consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.
-Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.
+> markdown是好的写作方式。
 
 #### 嵌套引用
-> This is the first level of quoting.
+> markdown是好的写作方式。
 >
-> > This is nested blockquote.
+> > 前提是要写。
 >
-> Back to the first level.
+> 行动就成功了一半。
 #### 列表
 * Red
 * Green
@@ -38,14 +36,7 @@ Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.
 2. McHale
 3. Parish
 
-#### 代码区域（四个空格）
-    这是一个代码区块。
-    private ArrBalMngr _getArrBalMngr() {
-        if (arrBalMngr == null) {
-            arrBalMngr = (ArrBalMngr) CbbApplicationContext.getBean(ArrBalMngr.class, arrBalMngr);
-        }
-        return arrBalMngr;
-    }
+
 #### 分隔线
 
 ---------------------------------------
@@ -55,16 +46,23 @@ Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.
 
 [an optional title example](http://google.com/ "Optional Title")
 
-#### 图像
-![Alt img](/path/to/img.jpg)
-
-![Alt optional title img](/path/to/img.jpg "Optional Title")
-
 #### 表格
 | Item     | Value | Qty   |
 | :------- | ----: | :---: |
 | Computer | $1600 |  5    |
 | Phone    | $12   |  12   |
 | Pipe     | $1    |  234  |
+
+#### 代码区域（四个空格）
+    这是一个代码区块。
+    private ArrBalMngr _getArrBalMngr() {
+        if (arrBalMngr == null) {
+            arrBalMngr = (ArrBalMngr) CbbApplicationContext.getBean(ArrBalMngr.class, arrBalMngr);
+        }
+        return arrBalMngr;
+    }
+
+#### 图像
+![Alt optional title img](./icon.png "征途是星辰大海")
 
 ## 高级语法 暂时不用
