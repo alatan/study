@@ -1,5 +1,7 @@
 package base.reflection;
 
+import sun.applet.AppletClassLoader;
+
 import java.lang.reflect.*;
 
 /**
@@ -15,6 +17,8 @@ public class Client {
 //          appleClass = Apple.class;
 //          Apple apple = new Apple();
 //          appleClass = apple.getClass();
+//          ClassLoader loader = ClassLoader.getSystemClassLoader();
+//          appleClass = loader.loadClass("base.reflection.Apple");
             /**
              *  类名
              */
@@ -31,7 +35,7 @@ public class Client {
             }
             //1.2 getConstructors
             System.out.println("**********getConstructors**********");
-            Constructor[] constructors=appleClass.getConstructors();
+            Constructor[] constructors = appleClass.getConstructors();
             for(Constructor constructor:constructors){
                 System.out.println(constructor.toString());
             }
