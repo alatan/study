@@ -3,12 +3,18 @@ package base.reflection;
 import java.lang.reflect.*;
 
 /**
- * 反射 (Reflection) 是 Java 的特征之一，它允许运行中的 Java 程序获取自身的信息，并且可以操作类或对象的内部属性。
+ * 反射
  */
 public class Client {
     public static void main(String[] args) {
         try {
+            /**
+             * 获得Class对象
+             */
             Class appleClass = Class.forName("base.reflection.Apple");
+//          appleClass = Apple.class;
+//          Apple apple = new Apple();
+//          appleClass = apple.getClass();
             /**
              *  类名
              */
