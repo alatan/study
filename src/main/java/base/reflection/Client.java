@@ -17,8 +17,7 @@ public class Client {
 //          appleClass = Apple.class;
 //          Apple apple = new Apple();
 //          appleClass = apple.getClass();
-//          ClassLoader loader = ClassLoader.getSystemClassLoader();
-//          appleClass = loader.loadClass("base.reflection.Apple");
+//          appleClass = ClassLoader.getSystemClassLoader().loadClass("base.reflection.Apple");
             /**
              *  类名
              */
