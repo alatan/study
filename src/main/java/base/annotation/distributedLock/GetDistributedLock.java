@@ -3,7 +3,7 @@ package base.annotation.distributedLock;
 import java.lang.annotation.*;
 
 /**
- * @Description: 获取redis分布式锁 注解
+ * 获取redis分布式锁 注解
  **/
 @Target(ElementType.METHOD)
 @Retention(RetentionPolicy.RUNTIME)

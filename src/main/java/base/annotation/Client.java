@@ -7,7 +7,7 @@ import java.lang.reflect.Field;
 /**
  * 示例-反射获取注解
  */
-public class MyFieldTest {
+public class Client {
 
     @Test
     public void testMyField(){

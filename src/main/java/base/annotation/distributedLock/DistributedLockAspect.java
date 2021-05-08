@@ -8,7 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 /**
- * @Description: 自定义注解结合AOP切面编程优雅的使用分布式锁
+ * 自定义注解结合AOP切面编程优雅的使用分布式锁
  **/
 @Component
 @Aspect
