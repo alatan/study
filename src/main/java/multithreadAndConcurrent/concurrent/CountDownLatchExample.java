@@ -1,39 +1,41 @@
 package multithreadAndConcurrent.concurrent;
 
-import java.util.concurrent.Executors;
-import java.util.concurrent.ExecutorService;
 import java.util.concurrent.CountDownLatch;
 
-public class CountDownLatchExample {
-    // 请求的数量
-    private static final int threadCount = 100;
+    class MyThread extends Thread {
+        private CountDownLatch countDownLatch;
 
-    public static void main(String[] args) throws InterruptedException {
-        // 创建一个具有固定线程数量的线程池对象（如果这里线程池的线程数量给太少的话你会发现执行的很慢）
-        ExecutorService threadPool = Executors.newFixedThreadPool(30);
-        final CountDownLatch countDownLatch = new CountDownLatch(threadCount);
-        for (int i = 0; i < threadCount; i++) {
-            final int threadnum = i;
-            threadPool.execute(() -> {// Lambda 表达式的运用
-                try {
-                    test(threadnum);
-                } catch (InterruptedException e) {
-                    // TODO Auto-generated catch block
-                    e.printStackTrace();
-                } finally {
-                    countDownLatch.countDown();// 表示一个请求已经被完成
-                }
-
-            });
+        public MyThread(String name, CountDownLatch countDownLatch) {
+            super(name);
+            this.countDownLatch = countDownLatch;
         }
-        countDownLatch.await();
-        threadPool.shutdown();
-        System.out.println("finish");
+
+        @Override
+        public void run() {
+            System.out.println(Thread.currentThread().getName() + " doing something");
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            System.out.println(Thread.currentThread().getName() + " finish");
+            countDownLatch.countDown();
+        }
     }
 
-    public static void test(int threadnum) throws InterruptedException {
-        Thread.sleep(1000);// 模拟请求的耗时操作
-        System.out.println("threadnum:" + threadnum);
-        Thread.sleep(1000);// 模拟请求的耗时操作
+    public class CountDownLatchExample {
+        public static void main(String[] args) {
+            CountDownLatch countDownLatch = new CountDownLatch(2);
+            MyThread t1 = new MyThread("t1", countDownLatch);
+            MyThread t2 = new MyThread("t2", countDownLatch);
+            t1.start();
+            t2.start();
+            System.out.println("Waiting for t1 thread and t2 thread to finish");
+            try {
+                countDownLatch.await();
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            System.out.println(Thread.currentThread().getName() + " continue");
+        }
     }
-}
