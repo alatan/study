@@ -1,4 +1,4 @@
-package multithreadAndConcurrent.concurrent;
+package multithreadAndConcurrent.threadLocal;
 
 public class ThreadLocalExample1 {
 
@@ -12,7 +12,7 @@ public class ThreadLocalExample1 {
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-            System.out.println(Thread.currentThread().getName()+threadLocal.get());
+            System.out.println(Thread.currentThread().getName()+":"+threadLocal.get());
             threadLocal.remove();
         });
         Thread thread2 = new Thread(() -> {
@@ -22,7 +22,7 @@ public class ThreadLocalExample1 {
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-            System.out.println(Thread.currentThread().getName()+threadLocal.get());
+            System.out.println(Thread.currentThread().getName()+":"+threadLocal.get());
             threadLocal.remove();
         });
         thread1.start();

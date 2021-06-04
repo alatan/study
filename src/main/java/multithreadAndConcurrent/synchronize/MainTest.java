@@ -1,4 +1,4 @@
-package multithreadAndConcurrent.sync;
+package multithreadAndConcurrent.synchronize;
 
 public class MainTest {
 

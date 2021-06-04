@@ -1,4 +1,4 @@
-package multithreadAndConcurrent.concurrent;
+package multithreadAndConcurrent.aqs;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -8,9 +8,6 @@ import java.util.concurrent.CountDownLatch;
  * 使用CountDownLatch 代替wait notify 好处是通讯方式简单，不涉及锁定  Count 值为0时当前线程继续执行，
  */
 
-    /**
-     * 使用CountDownLatch 代替wait notify 好处是通讯方式简单，不涉及锁定  Count 值为0时当前线程继续执行，
-     */
     public class T4 {
 
         volatile List list = new ArrayList();

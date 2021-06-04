@@ -1,4 +1,4 @@
-package multithreadAndConcurrent.concurrent;
+package multithreadAndConcurrent.aqs;
 
 import java.util.concurrent.Executors;
 import java.util.concurrent.ExecutorService;

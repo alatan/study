@@ -1,4 +1,4 @@
-package multithreadAndConcurrent.concurrent;
+package multithreadAndConcurrent.aqs;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -2,6 +2,7 @@ package multithreadAndConcurrent.lock;
 
 class Consumer {
     private Depot depot;
+
     public Consumer(Depot depot) {
         this.depot = depot;
     }
@@ -18,6 +19,7 @@ class Consumer {
 
 class Producer {
     private Depot depot;
+
     public Producer(Depot depot) {
         this.depot = depot;
     }
