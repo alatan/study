@@ -27,7 +27,6 @@ public class ThreadLocalExample {
             threadLocal.remove();
         });
 
-
         thread1.start();
         thread2.start();
     }
