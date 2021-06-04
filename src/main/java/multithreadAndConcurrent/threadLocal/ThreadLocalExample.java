@@ -1,37 +1,34 @@
 package multithreadAndConcurrent.threadLocal;
 
-import java.text.SimpleDateFormat;
-import java.util.Random;
+public class ThreadLocalExample {
 
-public class ThreadLocalExample implements Runnable{
+    public static void main(String[] args) {
 
-    /**
-     * SimpleDateFormat 不是线程安全的，所以每个线程都要有自己独立的副本
-     */
-    private static final ThreadLocal<SimpleDateFormat> FORMATTER = ThreadLocal.withInitial(() -> new SimpleDateFormat("yyyyMMdd HHmm"));
+        ThreadLocal threadLocal = new ThreadLocal();
 
-    public static void main(String[] args) throws InterruptedException {
-        ThreadLocalExample obj = new ThreadLocalExample();
-        for(int i=0 ; i<10; i++){
-            Thread t = new Thread(obj, ""+i);
-            Thread.sleep(new Random().nextInt(1000));
-            t.start();
-        }
+        Thread thread1 = new Thread(() -> {
+            threadLocal.set(2);
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            System.out.println(Thread.currentThread().getName()+":"+threadLocal.get());
+            threadLocal.remove();
+        });
+        Thread thread2 = new Thread(() -> {
+            threadLocal.set(1);
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            System.out.println(Thread.currentThread().getName()+":"+threadLocal.get());
+            threadLocal.remove();
+        });
+
+
+        thread1.start();
+        thread2.start();
     }
-
-    @Override
-    public void run() {
-        System.out.println("Thread Name= "+Thread.currentThread().getName()+" default Formatter = "+FORMATTER.get().toPattern());
-        try {
-            Thread.sleep(new Random().nextInt(1000));
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-        //formatter pattern is changed here by thread, but it won't reflect to other threads
-        FORMATTER.set(new SimpleDateFormat());
-
-        System.out.println("Thread Name= "+Thread.currentThread().getName()+" formatter = "+FORMATTER.get().toPattern());
-    }
-
 }
-
