@@ -1,10 +1,9 @@
 package multithreadAndConcurrent.synchronize;
 
 public class ObjectService {
-    private static Object lock = new Object();
     public void serviceMethodA(){
         try {
-            synchronized (lock) {
+            synchronized (this) {
                 System.out.println("A begin time="+System.currentTimeMillis());
                 Thread.sleep(2000);
                 System.out.println("A end time="+System.currentTimeMillis());
@@ -15,9 +14,26 @@ public class ObjectService {
     }
 
     public void serviceMethodB(){
-        synchronized (lock) {
+        synchronized (this) {
             System.out.println("B begin time="+System.currentTimeMillis());
             System.out.println("B end time="+System.currentTimeMillis());
         }
+    }
+
+    public static void main(String[] args) {
+        ObjectService service = new ObjectService();
+        Thread threadA = new Thread(){
+            public void run(){
+                service.serviceMethodA();
+            }
+        };
+        Thread threadB = new Thread(){
+            public void run(){
+                service.serviceMethodB();
+            }
+        };
+        threadA.start();
+        threadB.start();
+
     }
 }
