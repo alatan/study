@@ -1,4 +1,4 @@
-package multithreadAndConcurrent.lock;
+package multithreadAndConcurrent.lock.reentrant;
 
 class Consumer {
     private Depot depot;
