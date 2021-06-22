@@ -243,7 +243,9 @@ public class DateUtil {
 	}
 
 	public static void main(String[] args) {
-		Date date = DateUtil.parseDate("20191232");
-		System.out.println(date);
+//		Date date = DateUtil.parseDate("20191232");
+//		System.out.println(date);
+
+		System.out.println(new SimpleDateFormat("yyyyMMddHHmmss").format(new Date()));
 	}
 }
