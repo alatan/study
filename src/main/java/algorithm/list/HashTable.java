@@ -3,7 +3,7 @@ package algorithm.list;
 import java.util.HashMap;
 
 /**
- * 哈希表
+ * 线性数据结构-哈希表
  *
  * 链接：https://www.pdai.tech/md/algorithm/alg-basic-hashtable.html
  */

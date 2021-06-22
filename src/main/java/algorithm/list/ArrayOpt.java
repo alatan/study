@@ -1,7 +1,7 @@
 package algorithm.list;
 
 /**
- * 数组
+ * 线性数据结构-数组
  * 参考 https://www.pdai.tech/md/algorithm/alg-basic-array.html
  */
 public class ArrayOpt {
