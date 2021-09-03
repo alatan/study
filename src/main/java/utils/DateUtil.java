@@ -2,8 +2,7 @@ package utils;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.Date;
+import java.util.*;
 
 public class DateUtil {
 
@@ -246,6 +245,26 @@ public class DateUtil {
 //		Date date = DateUtil.parseDate("20191232");
 //		System.out.println(date);
 
-		System.out.println(new SimpleDateFormat("yyyyMMddHHmmss").format(new Date()));
+//		System.out.println(new SimpleDateFormat("yyyyMMddHHmmss").format(new Date()));
+		List<String> dataList = new ArrayList<>();
+		dataList.add("20200521");
+		dataList.add("20210506");
+		dataList.add("20210706");
+		dataList.add("20210806");
+		dataList.add("20210801");
+		dataList.add("20210731");
+		for (String temp : dataList){
+			System.out.println(temp);
+		}
+		Collections.sort(dataList, new Comparator<String>() {
+			public int compare(String arr1, String arr2) {
+				//还款日期排序，由近到远
+				return arr2.compareTo(arr1);
+			}
+		});
+		System.out.println("--------------------------");
+		for (String temp : dataList){
+			System.out.println(temp);
+		}
 	}
 }
