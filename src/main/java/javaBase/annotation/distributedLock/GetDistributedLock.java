@@ -1,4 +1,4 @@
-package base.annotation.distributedLock;
+package javaBase.annotation.distributedLock;
 
 import java.lang.annotation.*;
 

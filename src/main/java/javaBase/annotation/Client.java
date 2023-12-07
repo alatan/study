@@ -1,4 +1,4 @@
-package base.annotation;
+package javaBase.annotation;
 
 import org.junit.Test;
 

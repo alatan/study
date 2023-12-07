@@ -1,4 +1,4 @@
-package base.reflection;
+package javaBase.reflection;
 
 public class Fruit {
     public String taste;

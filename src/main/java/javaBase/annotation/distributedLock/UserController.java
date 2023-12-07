@@ -1,4 +1,4 @@
-package base.annotation.distributedLock;
+package javaBase.annotation.distributedLock;
 
 import org.springframework.web.bind.annotation.GetMapping;
 

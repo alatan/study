@@ -1,4 +1,4 @@
-package base.annotation;
+package javaBase.annotation;
 
 public class User {
     //使用我们的自定义注解

@@ -1,6 +1,4 @@
-package base.reflection;
-
-import sun.applet.AppletClassLoader;
+package javaBase.reflection;
 
 import java.lang.reflect.*;
 
@@ -13,7 +11,7 @@ public class Client {
             /**
              * 获得Class对象
              */
-            Class appleClass = Class.forName("base.reflection.Apple");
+            Class appleClass = Class.forName("javaBase.reflection.Apple");
 //          appleClass = Apple.class;
 //          Apple apple = new Apple();
 //          appleClass = apple.getClass();

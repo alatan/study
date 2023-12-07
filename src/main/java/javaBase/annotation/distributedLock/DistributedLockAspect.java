@@ -1,4 +1,4 @@
-package base.annotation.distributedLock;
+package javaBase.annotation.distributedLock;
 
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
