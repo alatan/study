@@ -1,4 +1,4 @@
-package jvm;
+package jvm.object;
 
 /**
  * 内存分配担保案例
