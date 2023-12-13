@@ -105,6 +105,12 @@
             <version>5.2.12.RELEASE</version>
         </dependency>
 
+        <dependency>
+            <groupId>com.google.protobuf</groupId>
+            <artifactId>protobuf-java</artifactId>
+            <version>3.6.1</version>
+        </dependency>
+
     </dependencies>
 
 </project>
